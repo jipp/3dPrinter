@@ -2,9 +2,11 @@ size_cube = 16 ;
 
 t = 1;
 
+cubesFactor = 2;
+
 size_x = 2*size_cube;
 size_y = size_cube+2*t;
-size_z = size_cube*(1+0.33)+t;
+size_z = size_cube*(1+0.33)/cubesFactor+t;
 
 holder_x = 1;
 holder_y = 14;
