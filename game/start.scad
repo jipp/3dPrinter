@@ -1,15 +1,14 @@
 //$fn = 72;
-$fn = 7;
 
-height = 2;
-radius = 10;
-thickness = 2;
-depth = 0.75;
+height = 3;
+radius = 15;
+thickness = 3;
+depth = 1;
 font = "Liberation Sans:style=Bold Italic";
-size = 8;
+size = 14;
 singleSided = true;
 
-text = "20";
+text = "1.";
 
 difference() {
     cylinder(h=height, r1=radius, r2=radius, center=true);
