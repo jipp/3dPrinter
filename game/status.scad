@@ -1,6 +1,6 @@
 $fn=72;
 
-D=2;
+D=3;
 
 module planets()
 {
@@ -11,11 +11,12 @@ translate([-3, 3, D]) sphere(1.5);
 translate([0, -5, D]) sphere(2);
 }
 
-cylinder(D, d=15, true);
-cylinder(10, d=3, true);
+//cylinder(D, d=15, true);
+//cylinder(10, d=3, true);
 
 difference()
 {
+    //translate([0, 0, -D]) cylinder(D, r=15, true);
+    cylinder(D, d=15, true);
     planets();
-    translate([0, 0, -D]) cylinder(D, r=15, true);
 }
