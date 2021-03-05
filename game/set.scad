@@ -1,8 +1,19 @@
-x = 155;
+x = 155/2;
 y = 20;
+//z = 20*2/3;
 z = 20;
 t = 3;
 m=t/2;
+//m=t/3;
+
+module hull() {
+    difference() {
+        cube([x+t+1, y+t+1, z+t/2]);
+        translate([t/2, t/2, t/2]) cube([x+1, y+1, z]);
+        translate([t+1, t+1, 0]) cube([x/2-3, y-2, z]);        
+        translate([t+1.5+x/2, t+1, 0]) cube([x/2-3, y-2, z]);        
+    }
+}
 
 module one() {
     difference() {
@@ -28,5 +39,34 @@ module two() {
     }
 }
 
-one();
-//two();
+module three() {
+    difference() {
+        cube([x, y, z]);
+        translate([(t+m)/2, (t+m)/2, t/2]) {
+            $fn=50;
+            rotate([0, 0, 0]) minkowski() {
+                cube([(x-t-m)/3-t*2/3, y-t-m, z+t/2]);
+                cylinder(m);
+            }
+        }
+        translate([(t+m)/2+x/3, (t+m)/2, t/2]) {
+            $fn=50;
+            rotate([0, 0, 0]) minkowski() {
+                cube([(x-t-m)/3-t*2/3, y-t-m, z+t/2]);
+                cylinder(m);
+            }
+        }
+        translate([(t+m)/2+x*2/3, (t+m)/2, t/2]) {
+            $fn=50;
+            rotate([0, 0, 0]) minkowski() {
+                cube([(x-t-m)/3-t, y-t-m, z+t/2]);
+                cylinder(m);
+            }
+        }
+    }
+}
+
+//hull();
+//one();
+two();
+//three();
