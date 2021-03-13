@@ -12,7 +12,7 @@
    viewBox="0 0 1000 700"
    version="1.1"
    id="svg8"
-   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   inkscape:version="1.0.2 (e86c8708, 2021-01-15)"
    sodipodi:docname="seite.svg">
   <defs
      id="defs2" />
@@ -23,17 +23,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="229.06961"
-     inkscape:cy="956.46013"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="299.33045"
+     inkscape:cy="724.66004"
      inkscape:document-units="mm"
      inkscape:current-layer="layer2"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:window-width="2188"
      inkscape:window-height="1246"
-     inkscape:window-x="208"
-     inkscape:window-y="238"
+     inkscape:window-x="272"
+     inkscape:window-y="117"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata5">
@@ -115,6 +115,26 @@
        height="104.15997"
        x="6.1700149"
        y="302.67004" />
+    <path
+       id="rect1175-0-0"
+       style="fill:none;stroke:#000000;stroke-width:0.258412;stroke-opacity:1"
+       d="M 175.18801,9.8708 H 145.81199 L 155.604,0.12921 h 9.792 z"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       id="rect1175-3-3-2-9"
+       style="fill:none;stroke:#000000;stroke-width:0.258412;stroke-opacity:1"
+       d="M 68.18801,9.8708 H 38.81199 L 48.604,0.12921 h 9.792 z"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       id="rect1175-3-9-1"
+       style="fill:none;stroke:#000000;stroke-width:0.258412;stroke-opacity:1"
+       d="m 204.12921,68.188016 v -29.37603 l 9.74158,9.79201 v 9.79201 z"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       id="rect1175-3-9-1-7"
+       style="fill:none;stroke:#000000;stroke-width:0.258412;stroke-opacity:1"
+       d="m 9.870786,38.811986 v 29.37603 l -9.74158,-9.79201 v -9.79201 z"
+       sodipodi:nodetypes="ccccc" />
   </g>
   <g
      inkscape:groupmode="layer"
