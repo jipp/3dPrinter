@@ -32,22 +32,23 @@ difference() {
 //    translate([-d, -3+56-(56-30)/2, 35-3]) rotate([0, 90, 0]) cylinder(t, d=3.4);
 //}
 
-xl = 50;
-yl = 50;
-dl = 48;
-dh = 4;
-l = 5;
+// 30 mm
+xl = 30;
+yl = 30;
+dl = 28;
+dh = 3.4;
+l = 3;
 os = 5;
 s = 1;
 
-//difference() {
-//    translate([-d, (56-xl)/2, 0]) cube([t, xl, yl+os]);
-//    translate([-d, 56/2, yl/2+os]) rotate([0,90, 0]) cylinder(t, d=dl);
-//    translate([-d, l+(56-xl)/2, l+os]) rotate([0, 90, 0]) cylinder(t, d=dh);
-//    translate([-d, l+(56-xl)/2, yl-l+os]) rotate([0, 90, 0]) cylinder(t, d=dh);
-//    translate([-d, -l+56-(56-xl)/2, l+os]) rotate([0, 90, 0]) cylinder(t, d=dh);
-//    translate([-d, -l+56-(56-xl)/2, yl-l+os]) rotate([0, 90, 0]) cylinder(t, d=dh);
-//}
+// 40 mm
+//xl = 50;
+//yl = 50;
+//dl = 48;
+//dh = 4;
+//l = 5;
+//os = 5;
+//s = 1;
 
 difference() {
     translate([-d, 0, 0]) cube([t*s, 56, yl+os]);

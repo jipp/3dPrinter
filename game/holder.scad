@@ -1,4 +1,4 @@
-sizeDice = 16 ;
+sizeDice = 16;
 
 t = 1;
 
@@ -41,52 +41,47 @@ module holder(showDirection = false, angle = 0)
     }
 }
 
-module piece(name)
+module piece(name = [""])
 {
-    for (position = [0:1:len(name)-1] )
+    for (positionY = [0:1:len(name)-1] )
     {
-        if (name[position] == "S")
+        for (positionX = [0:1:len(name[positionY])-1] )
         {
-            translate([0, 0, 0]) dice(2);
-            translate([sizeX, 0, 0]) holder();
-            translate([sizeX *2, 0, 0]) dice(2);
-            translate([sizeX *0.5, sizeY, 0]) rotate([0, 0, 90]) dice(2);
-            translate([sizeX *0.5, -sizeY, 0]) rotate([0, 0, 90]) dice(2);
-        }
-        else if (name[position] == "A")
-        {
-            translate([sizeX * position, 0, 0]) holder(true, 0);
-        }
-        else if (name[position] == "a")
-        {
-            translate([sizeX * position, 0, 0]) holder(true, 90);
-        }
-        else if (name[position] == "B")
-        {
-            translate([sizeX * position, 0, 0]) holder(false, 0);
-        }
-        else if (name[position] == "b")
-        {
-            translate([sizeX * position, 0, 0]) holder(false, 90);
-        }
-        else if (name[position] == "V")
-        {
-            translate([sizeX * position, 0, 0]) dice(1, 0);
-        }
-        else if (name[position] == "v")
-        {
-            translate([sizeX * position, 0, 0]) dice(1, 90);
-        }
-        else if (name[position] == "W")
-        {
-            translate([sizeX * position, 0, 0]) dice(2, 0);
-        }
-        else if (name[position] == "w")
-        {
-            translate([sizeX * position, 0, 0]) dice(2, 90);
+            if (name[positionY][positionX] == "A")
+            {
+                translate([sizeX * positionX, sizeY * positionY, 0]) holder(true, 0);
+            }
+            else if (name[positionY][positionX] == "a")
+            {
+                translate([sizeX * positionX, sizeY * positionY, 0]) holder(true, 90);
+            }
+            else if (name[positionY][positionX] == "B")
+            {
+                translate([sizeX * positionX, sizeY * positionY, 0]) holder(false, 0);
+            }
+            else if (name[positionY][positionX] == "b")
+            {
+                translate([sizeX * positionX, sizeY * positionY, 0]) holder(false, 90);
+            }
+            else if (name[positionY][positionX] == "V")
+            {
+                translate([sizeX * positionX, sizeY * positionY, 0]) dice(1, 0);
+            }
+            else if (name[positionY][positionX] == "v")
+            {
+                translate([sizeX * positionX, sizeY * positionY, 0]) dice(1, 90);
+            }
+            else if (name[positionY][positionX] == "W")
+            {
+                translate([sizeX * positionX, sizeY * positionY, 0]) dice(2, 0);
+            }
+            else if (name[positionY][positionX] == "w")
+            {
+                translate([sizeX * positionX, sizeY * positionY, 0]) dice(2, 90);
+            }
         }
     }
 }
 
-// A, B, AV, AW, WAW, AWB, WAWW, WAWWW
-piece("WaW");
+// A, B, AV, AW, WAW, AWB, WAWW, WAWWW, bab
+piece([" w ", "WBW", " w "]);
