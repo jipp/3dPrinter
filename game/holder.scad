@@ -30,8 +30,8 @@ module holder(showDirection = false, angle = 0)
         translate([0, 0, holderZ/2+t]) rotate([0, 0, holderAngle])
         {
             union() {
-                translate([(holderX+holderDistance)/2, 0, 0]) cube([holderX, holderY, holderZ], true);
-                translate([-(holderX+holderDistance)/2, 0, 0]) cube([holderX, holderY, holderZ], true);
+                translate([(holderX + holderDistance)/2, 0, 0]) cube([holderX, holderY, holderZ], true);
+                translate([-(holderX + holderDistance)/2, 0, 0]) cube([holderX, holderY, holderZ], true);
             }
         }
         if (showDirection)
@@ -84,4 +84,5 @@ module piece(name = [""])
 }
 
 // A, B, AV, AW, WAW, AWB, WAWW, WAWWW, bab
-piece([" w ", "WBW", " w "]);
+//piece([" w ", "WBW", " w "]);
+holder(0, 0);
